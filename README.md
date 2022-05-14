@@ -12,11 +12,8 @@ Our data is from Kaggle Competition: Facebook Recruiting IV: Human or Robot?
 - Bidder datasets<br />
 train.csv - the training set from the bidder dataset<br />
 test.csv - the test set from the bidder dataset<br />
-<br />
 - Bid dataset<br />
 bids.csv - the bid dataset<br />
-<br />
 - The data in this competition comes from an online platform, not from Facebook.<br />
-<br />
 ## Questions hope to answer with the data
 In order to improve fairness of bidding competition, can we identify and eliminate computer generated bidding auction? </br>
