@@ -32,3 +32,5 @@ In order to improve fairness of bidding competition, can we identify and elimina
   2.	If the data is imbalanced, use undersampling or oversampling models
   3.	We have both test and train data, and target is predicting categorical labels, so we will choose several supervised models: Easy Ensemble AdaBoost Classifier, Deep Learning, Random Forest Classifier 
   4.	Check model results, such as accuracy, confusion matrix, feature importance, recall score, to get the best performance to predict the robot bidders. 
+
+**About Individual Branches: We didn't assign specific task to each member yet, thus we just used our name. Later we will rename each branch to corresponding task name.**
