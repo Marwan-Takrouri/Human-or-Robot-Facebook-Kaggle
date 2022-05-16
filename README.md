@@ -12,10 +12,21 @@ Our data is from Kaggle Competition: [Facebook Recruiting IV: Human or Robot?](h
 - Bidder datasets
   - train.csv - the training set from the bidder dataset
   - test.csv - the test set from the bidder dataset
+
 - Bid dataset<br />
   - bids.csv - the bid dataset <br>
-  
+
 The data in this competition comes from an online platform, not from Facebook.
+
+## List of columns for each dataset
+- bidder_id – Unique identifier of a bidder.
+  - payment_account – Payment account associated with a bidder. These are obfuscated to protect privacy. 
+  - address – Mailing address of a bidder. These are obfuscated to protect privacy. 
+  - outcome – Label of a bidder indicating whether or not it is a robot. Value 1.0 indicates a robot, where value 0.0 indicates human. 
+    - The outcome was half hand labeled, half stats-based. There are two types of "bots" with different levels of proof:
+      - Bidders who are identified as bots/fraudulent with clear proof. Their accounts were banned by the auction site.
+      - Bidder who may have just started their business/clicks or their stats exceed from system wide average. There are no clear proof that they are bots. <br />
+
 
 ## Questions hope to answer with the data
 In order to improve fairness of bidding competition, can we identify and eliminate computer generated bidding auction? </br>
