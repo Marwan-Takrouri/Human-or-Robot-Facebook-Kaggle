@@ -1,13 +1,13 @@
 # Human-or-Robot-Facebook-Kaggle
 
-## Topic
+## Objective/Purpose
 The goal of this project is to identify online auction bids that are placed by "robots", helping the site owners easily flag these users for removal from their site to prevent unfair auction activity. 
 
-## Reason why choose this topic
+## Reason why we chose this topic
 It is predicted that online retail sales will reach $6.17 trillion by 2023*. The project focusses on identifying robotic/automated bidders for online auctions. The hope is that the machine learning model could be further improved and developed to not only help with websites like eBay, which rely on bidding for items, but for any online transaction that relies on bidding.
 <br>[* Global Ecommerce Explained: Stats and Trends to Watch in 2022](https://www.shopify.ca/enterprise/global-ecommerce-statistics#3)
 
-## Description of the source of data
+## Data source description
 Our data is from Kaggle Competition: [Facebook Recruiting IV: Human or Robot?](https://www.kaggle.com/competitions/facebook-recruiting-iv-human-or-bot/data)
 - Bidder datasets
   - train.csv - the training set from the bidder dataset
