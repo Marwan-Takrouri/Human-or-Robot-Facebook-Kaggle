@@ -41,7 +41,7 @@ The data in this competition comes from an online platform, not from Facebook.
 
 
 ## Questions hope to answer with the data
-In order to improve fairness of bidding competition, can we identify and eliminate computer generated bidding auction? </br>
+In order to improve fairness of bidding competition, can we identify and eliminate (if not greatly reduce) bot generated bids in auctions? </br>
 
 ## Plans to do for the dataset
 - EDA
