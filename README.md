@@ -71,4 +71,4 @@ In order to improve fairness of bidding competition, can we identify and elimina
 **About Individual Branches: We didn't assign specific task to each member yet, thus we just used our name. Later we will rename each branch to corresponding task name.**
 
 ## Slides
-[Human or Robot Final Project](https://docs.google.com/presentation/d/1LSDd4DbmZfU-R24PV61POvOXs5K5NfrL_8lu1h78M-8/edit#slide=id.p1)
+[Human or Robot Final Project]([https://docs.google.com/presentation/d/e/2PACX-1vSAzBq0DW5q_teQ5KHmgzMkcZCFw8pFGJNL2[…]APeR7BDSdQrDo2pbZu2Dh/pub?start=false&loop=false&delayms=3000])
