@@ -45,17 +45,27 @@ In order to improve fairness of bidding competition, can we identify and elimina
 
 ## Plans to do for the dataset
 - EDA
-  1.	[Roughly explore the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/jiawen/Explore_the_data.ipynb)
-  2.	Replace the bidder_id in bidder dataset to a shorter format to save memory and computational time.
-  3.	Merge each bidder dataset separately to bids, since all train and test data are unique. This step could be done with PostgreSQL, and store in a new database.
-  4.	Add some visualizations to describe our cleaned data (Optional)
-  5.	Preprocess the data: clean (i.e. missing values) and transform, drop unnecessary columns, bucket, encode, scale for machine learning
-- Machine Learning
-  1.	Split the merged dataset into test and train data
-  2.	If the data is imbalanced, use undersampling or oversampling models
-  3.	We have both test and train data, and target is predicting categorical labels, so we will choose several supervised models: Easy Ensemble AdaBoost Classifier, Deep Learning, Random Forest Classifier 
-  4.	Check model results, such as accuracy, confusion matrix, feature importance, recall score, to get the best performance to predict the robot bidders. 
+  1.	[Explore the data]([https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/jiawen/Explore_the_data.ipynb](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Explore_the_data.ipynb)
+  2.	[Clean the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Data_Cleaning.ipynb): There are 8,859 null values in country column in bids dataset. Insead of dropping all the null, we tried [MaxMind GeoIP2 Python API](https://geoip2.readthedocs.io/en/latest/) to aquire country information based on the ip address.
+  3.	Store the cleaned bids dataset and bider dataset(train and test) to PostgreSql locally.
+  4.	[Preprocess the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Preprocessing_the_data.ipynb): transform, bucket, encode
+- [Machine Learning](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Modeling.ipynb)
+  1.  Merge train data with processed data, then drop the unnecessary columns for later modeling.
+  2.	Split the merged dataset into test and train data
+  3.	Scale the merged dataset: comparing the two methods MinMaxScaler and StandardScaler, then choose the one with better accuracy.
+  4.	Since our data is super imbalanced (103 robots vs 1,881 human), and our target is predicting categorical labels, we choose several supervised models: 
+      1. Balanced RandomForest Classifier
+      2. Easy Ensemble AdaBoost Classifier
+      3. Gradient Boosting Classifier
+      4. Ada Boost Classifier
+  5.	Check model results, such as accuracy, confusion matrix, feature importance, recall score, to get the best performance to predict the robot bidders. 
+  
+  <p align="center">
+  <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/model_comparision.png">
+</p>
+
+  7.	Use the best model to predit test data and get the final result.
 - Data Storage
-  1. We are using cloud SQL for data storage, current choices are azure database for postgreSQL and GCP SQL.
+  1. We are using PostgreSQL for data storage, current choice is PgAdmin 4.
 
 **About Individual Branches: We didn't assign specific task to each member yet, thus we just used our name. Later we will rename each branch to corresponding task name.**
