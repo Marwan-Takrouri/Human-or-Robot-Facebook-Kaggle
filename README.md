@@ -63,6 +63,7 @@ In order to improve fairness of bidding competition, can we identify and elimina
   <p align="center">
   <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/model_comparision.png">
 </p>
+<img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/model_comparision.png">
 
   7.	Use the best model to predit test data and get the final result.
 - Data Storage
