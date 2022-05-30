@@ -45,7 +45,7 @@ In order to improve fairness of bidding competition, can we identify and elimina
 
 ## Plans to do for the dataset
 - EDA
-  1.	[Explore the data]([https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/jiawen/Explore_the_data.ipynb](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Explore_the_data.ipynb)
+  1.	[Explore the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Explore_the_data.ipynb)
   2.	[Clean the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Data_Cleaning.ipynb): There are 8,859 null values in country column in bids dataset. Insead of dropping all the null, we tried [MaxMind GeoIP2 Python API](https://geoip2.readthedocs.io/en/latest/) to aquire country information based on the ip address.
   3.	Store the cleaned bids dataset and bider dataset(train and test) to PostgreSql locally.
   4.	[Preprocess the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Preprocessing_the_data.ipynb): transform, bucket, encode
