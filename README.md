@@ -53,7 +53,7 @@ In order to improve fairness of bidding competition, can we identify and elimina
   1.  Merge train data with processed data, then drop the unnecessary columns for later modeling.
   2.	Split the merged dataset into test and train data
   3.	Scale the merged dataset: comparing the two methods MinMaxScaler and StandardScaler, then choose the one with better accuracy.
-  4.	Since our data is super imbalanced (103 robots vs 1,881 human), and our target is predicting categorical labels, we choose several supervised models: 
+  4.	Since our data is severely imbalanced (103 robots vs 1,881 human), and our target is predicting categorical labels, we choose several supervised models: 
       1. Balanced RandomForest Classifier
       2. Easy Ensemble AdaBoost Classifier
       3. Gradient Boosting Classifier
@@ -69,7 +69,8 @@ In order to improve fairness of bidding competition, can we identify and elimina
   <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/Human_bot_train.png">
   
 
-  7.	Use the best model to predit test data and get the final result.
+  6.	Use the best model to predit test data and get the final result.
+  
 - Data Storage
   1. We are using PostgreSQL for data storage, current choice is PgAdmin 4.
 
