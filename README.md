@@ -23,7 +23,7 @@ The data in this competition comes from an online platform, not from Facebook.
   - bidder_id – Unique identifier of a bidder.
   - payment_account – Payment account associated with a bidder. These are obfuscated to protect privacy. 
   - address – Mailing address of a bidder. These are obfuscated to protect privacy. 
-  - outcome – Label of a bidder indicating whether or not it is a robot. Value 1.0 indicates a robot, where value 0.0 indicates human. 
+  - outcome – Label of a bidder indicating whether or not it is a robot. ***Value 1.0 indicates a robot, where value 0.0 indicates human.*** 
     - The outcome was half hand labeled, half stats-based. There are two types of "bots" with different levels of proof:
       1. Bidders who are identified as bots/fraudulent with clear proof. Their accounts were banned by the auction site.
       2. Bidder who may have just started their business/clicks or their stats exceed from system wide average. There are no clear proof that they are bots. <br />
@@ -43,35 +43,32 @@ The data in this competition comes from an online platform, not from Facebook.
 ## Questions hope to answer with the data
 In order to improve fairness of bidding competition, can we identify and eliminate (if not greatly reduce) bot generated bids in auctions? </br>
 
-## Plans to do for the dataset
+## Data Analysis
 - EDA
-  1.	[Explore the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Explore_the_data.ipynb)
-  2.	[Clean the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Data_Cleaning.ipynb): There are 8,859 null values in country column in bids dataset. Insead of dropping all the null, we tried [MaxMind GeoIP2 Python API](https://geoip2.readthedocs.io/en/latest/) to aquire country information based on the ip address.
-  3.	Store the cleaned bids dataset and bider dataset(train and test) to PostgreSql locally.
-  4.	[Preprocess the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Preprocessing_the_data.ipynb): transform, bucket, encode
+  1.	[Explore the three dataset](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Explore_the_data.ipynb)
+  2.	[Clean the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Data_Cleaning.ipynb): There are 8,859 null values in *country* column in bids dataset. Instead of dropping all the null, we tried [MaxMind GeoIP2 Python API](https://geoip2.readthedocs.io/en/latest/) to acquire country information based on the ip address.
+  3.	Store the cleaned bids dataset and bidder dataset (train and test) to PostgreSql locally.
+- [Preprocess the data](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Preprocessing_the_data.ipynb): 
+  1. Transform: Calculate time difference between each bid (new column: *timediff*) and the rank of each bidder within one auction (new column: *bidding_order*). Group by *bidder_id* to understand their behaviour, such as the number of devices the bidder used and the total number of bids the bidder participated. Also group by *bidder_id* and *auction* for better understanding.
+  2. Bucket: *Device* and *country* contain more than two hundred of categories, therefore we binned the categories into a smaller number of groups to reduce the effects of minor observation errors.
+  3. Encode: Convert object data in <i>merchandise</i>, *device* and *country* columns to numbers that the machine learning model is able to understand and extract valuable information. Then group by bidder_id to obtain more behaviour information of each bidder.
+ 
 - [Machine Learning](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Modeling.ipynb)
-  1.  Merge train data with processed data, then drop the unnecessary columns for later modeling.
+  1.  Merge train data with processed data, then drop the unnecessary columns (*bidder_id, payment_account, address*) for modeling.
   2.	Split the merged dataset into test and train data
-  3.	Scale the merged dataset: comparing the two methods MinMaxScaler and StandardScaler, then choose the one with better accuracy.
-  4.	Since our data is severely imbalanced (103 robots vs 1,881 human), and our target is predicting categorical labels, we choose several supervised models: 
-      1. Balanced RandomForest Classifier
-      2. Easy Ensemble AdaBoost Classifier
-      3. Gradient Boosting Classifier
-      4. Ada Boost Classifier
-  5.	Check model results, such as accuracy, confusion matrix, feature importance, recall score, to get the best performance to predict the robot bidders. 
+  3.	Scale the merged dataset: comparing the two methods MinMaxScaler and StandardScaler, then choose the one with better accuracy. Finial Choice: *MinMaxScaler*
+  4.	Since our data is severely imbalanced (103 robots vs 1,881 human), and our target is predicting categorical labels, we choose several supervised models to find out the best one for final prediction: 
+          - Balanced RandomForest Classifier and extract feature importances
+          <br> <p align="center"> <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/Codes/Images/Importances.png"> </p>
+          - Easy Ensemble AdaBoost Classifier Classifier
+          - Gradient Boosting Classifier
+          - Ada Boost Classifier
+  5.	Comparet the model accuracy, confusion matrix, feature importance, recall score of all 4 models. ***Balanced RandomForest Classifie*** has the highest accuracy score 0.8872 and is the one we will apply to test dataset. 
+ <br> <p align="center"> <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/model_comparision.png"> </p> 
   
-  <p align="center">
-  <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/model_comparision.png">
-</p>
-
-
-
-  <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/Human_bot_train.png">
+  6.	Use Balanced RandomForest Classifie to predict test data and get the final result.
   
-
-  6.	Use the best model to predit test data and get the final result.
-  
-- Data Storage
+- [Data Storage](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/tree/main/Database)
   1. We are using PostgreSQL for data storage, current choice is PgAdmin 4.
 
 ***Branches Updated with new names on 28th may 2022 ***
