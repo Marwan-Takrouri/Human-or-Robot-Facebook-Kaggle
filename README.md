@@ -72,7 +72,8 @@ In order to improve fairness of bidding competition, can we identify and elimina
   1. We are using PostgreSQL for data storage, current choice is PgAdmin 4.
 
 ***Branches Updated with new names on 28th may 2022 ***
+***Branches and Files updated 05 june 2022***
 
 
-## Slides added on 28th may 2022
+## Slides added on 28th May 2022
 [Human or Robot Final Project](https://docs.google.com/presentation/d/e/2PACX-1vSAzBq0DW5q_teQ5KHmgzMkcZCFw8pFGJNL2bPyhPEparlof1yy_QKsOJSAPeR7BDSdQrDo2pbZu2Dh/pub?start=false&loop=false&delayms=3000)
