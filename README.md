@@ -78,4 +78,4 @@ In order to improve fairness of bidding competition, can we identify and elimina
 [Human or Robot Final Project](https://docs.google.com/presentation/d/e/2PACX-1vSAzBq0DW5q_teQ5KHmgzMkcZCFw8pFGJNL2bPyhPEparlof1yy_QKsOJSAPeR7BDSdQrDo2pbZu2Dh/pub?start=false&loop=false&delayms=3000)
 
 ## Dashboard
-There are 3 dashboards in our [Tableau storyboard](https://public.tableau.com/app/profile/jiawen.zhao/viz/human_bots_1_0/EDA#1): EDA, Machine learning, Feature importances. 
+There are 3 dashboards in our [Tableau storyboard](https://public.tableau.com/app/profile/jiawen.zhao/viz/human_bots_1_0/Combination?publish=yes): EDA, Machine learning, Feature importances. 
