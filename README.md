@@ -74,6 +74,8 @@ In order to improve fairness of bidding competition, can we identify and elimina
 ***Branches Updated with new names on 28th may 2022 ***
 ***Branches and Files updated 05 june 2022***
 
-
 ## Slides added on 28th May 2022
 [Human or Robot Final Project](https://docs.google.com/presentation/d/e/2PACX-1vSAzBq0DW5q_teQ5KHmgzMkcZCFw8pFGJNL2bPyhPEparlof1yy_QKsOJSAPeR7BDSdQrDo2pbZu2Dh/pub?start=false&loop=false&delayms=3000)
+
+## Dashboard
+There are 3 dashboards in our [Tableau storyboard](https://public.tableau.com/app/profile/jiawen.zhao/viz/human_bots_1_0/EDA#1): EDA, Machine learning, Feature importances. 
