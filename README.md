@@ -60,7 +60,7 @@ In order to improve fairness of bidding competition, can we identify and elimina
   4.	Since our data is severely imbalanced (103 robots vs 1,881 human), and our target is predicting categorical labels, we choose several supervised models to find out the best one for final prediction: 
           - Balanced RandomForest Classifier and extract feature importances
           <br> <p align="center"> <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/Codes/Images/Importances.png"> </p>
-          - Easy Ensemble AdaBoost Classifier Classifier
+          - Easy Ensemble Classifier
           - Gradient Boosting Classifier
           - Ada Boost Classifier
   5.	Comparet the model accuracy, confusion matrix, feature importance, recall score of all 4 models. ***Balanced RandomForest Classifie*** has the highest accuracy score 0.8872 and is the one we will apply to test dataset. 
