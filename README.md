@@ -13,9 +13,9 @@ Our data is from Kaggle Competition: [Facebook Recruiting IV: Human or Robot?](h
   - train.csv - the training set from the bidder dataset
   - test.csv - the test set from the bidder dataset
 
-- Bid dataset<br />
-  - bids.csv - the bid dataset <br>
-
+- Bid dataset
+  - bids.csv - the bid dataset
+  
 The data in this competition comes from an online platform, not from Facebook.
 
 ## List of columns for each dataset
@@ -26,7 +26,7 @@ The data in this competition comes from an online platform, not from Facebook.
   - outcome – Label of a bidder indicating whether or not it is a robot. ***Value 1.0 indicates a robot, where value 0.0 indicates human.*** 
     - The outcome was half hand labeled, half stats-based. There are two types of "bots" with different levels of proof:
       1. Bidders who are identified as bots/fraudulent with clear proof. Their accounts were banned by the auction site.
-      2. Bidder who may have just started their business/clicks or their stats exceed from system wide average. There are no clear proof that they are bots. <br />
+      2. Bidder who may have just started their business/clicks or their stats exceed from system wide average. There are no clear proof that they are bots. 
       
 - Bid dataset
   - bid_id - unique id for this bid
@@ -38,10 +38,10 @@ The data in this competition comes from an online platform, not from Facebook.
   - country - The country that the IP belongs to
   - ip – IP address of a bidder (obfuscated to protect privacy).
   - url - url where the bidder was referred from (obfuscated to protect privacy). 
-
+ <br> <p align="center"> <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/ERD.png"> </p> 
 
 ## Questions hope to answer with the data
-In order to improve fairness of bidding competition, can we identify and eliminate (if not greatly reduce) bot generated bids in auctions? </br>
+In order to improve fairness of bidding competition, can we identify and eliminate (if not greatly reduce) bot generated bids in auctions? 
 
 ## Data Analysis
 - EDA
