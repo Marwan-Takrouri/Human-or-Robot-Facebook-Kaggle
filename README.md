@@ -71,7 +71,7 @@ In order to improve fairness of bidding competition, can we identify and elimina
 - [Data Storage](https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/tree/main/Database)
   1. We are using PostgreSQL for data storage, current choice is PgAdmin 4.
 
-[Human or Robot Final Project](https://docs.google.com/presentation/d/e/2PACX-1vSAzBq0DW5q_teQ5KHmgzMkcZCFw8pFGJNL2bPyhPEparlof1yy_QKsOJSAPeR7BDSdQrDo2pbZu2Dh/pub?start=false&loop=false&delayms=3000)
+[Human or Robot Presentation](https://docs.google.com/presentation/d/e/2PACX-1vSb3z8ZgMNmEoiv3YyVtSh6BALLae25lWTrzgZMAzLD-SNq5QSTw3OPoBsNIJB5GYVkt7fv1CGc3pNb/pub?start=true&loop=false&delayms=3000)
 
 ## Dashboard
 There are 3 dashboards in our [Tableau storyboard](https://public.tableau.com/app/profile/jiawen.zhao/viz/human_bots_1_0/Combination?publish=yes): EDA, Machine learning, Feature importances. 
