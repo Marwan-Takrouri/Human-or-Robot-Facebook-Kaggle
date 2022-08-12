@@ -63,7 +63,7 @@ In order to improve fairness of bidding competition, can we identify and elimina
           - Easy Ensemble Classifier
           - Gradient Boosting Classifier
           - Ada Boost Classifier
-  5.	Comparet the model accuracy, confusion matrix, feature importance, recall score of all 4 models. ***Balanced RandomForest Classifie*** has the highest accuracy score 0.8872 and is the one we will apply to test dataset. 
+  5.	Comparet the model accuracy, ROC curves, ROC AUC scores, recall score, and processing time of all 4 models. ***Balanced RandomForest Classifie*** has the highest score 0.8872 and the fastest processing time. It is the one we will apply to test dataset. 
  <br> <p align="center"> <img src="https://github.com/Marwan-Takrouri/Human-or-Robot-Facebook-Kaggle/blob/main/Images/model_comparision.png"> </p> 
   
   6.	Use Balanced RandomForest Classifie to predict test data and get the final result.
@@ -74,4 +74,4 @@ In order to improve fairness of bidding competition, can we identify and elimina
 [Human or Robot Presentation](https://docs.google.com/presentation/d/e/2PACX-1vSb3z8ZgMNmEoiv3YyVtSh6BALLae25lWTrzgZMAzLD-SNq5QSTw3OPoBsNIJB5GYVkt7fv1CGc3pNb/pub?start=true&loop=false&delayms=3000)
 
 ## Dashboard
-There are 3 dashboards in our [Tableau storyboard](https://public.tableau.com/app/profile/jiawen.zhao/viz/human_bots_1_0/Combination?publish=yes): EDA, Machine learning, Feature importances. 
+There are 3 dashboards in our [Tableau storyboard](https://public.tableau.com/app/profile/jiawen.zhao/viz/HumanorRobots/Combination): EDA, Machine learning, Feature importances. 
